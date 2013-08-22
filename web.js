@@ -18,6 +18,11 @@ app.get('/', function(request, response) {
   response.send(data);
 });
 
+fs.readFile('contact.html', function (err, data) { if (err) throw err;   
+ data2=data.toString(); return data2;});
+
+app.get('/contact', function(request, response) {  response.send(data2);});
+
 // Render example.com/orders
 app.get('/orders', function(request, response) {
   global.db.Order.findAll().success(function(orders) {
