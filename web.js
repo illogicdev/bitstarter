@@ -9,7 +9,7 @@ var async   = require('async')
   , i18n    = require('i18next');
 
 i18n.init({
-  ignoreRoutes: ['pics/', 'public/', 'css/', 'js/', 'views/', 'models/']
+  ignoreRoutes: ['images/', 'public/', 'css/', 'js/', 'views/', 'models/']
 });
 
 var app = express();
