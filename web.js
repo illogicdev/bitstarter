@@ -5,7 +5,12 @@ var async   = require('async')
   , fs      = require('fs')
   , http    = require('http')
   , https   = require('https')
-  , db      = require('./models');
+  , db      = require('./models')
+  , i18n    = require('i18next');
+
+i18n.init({
+  ignoreRoutes: ['pics/', 'public/', 'css/', 'js/', 'views/', 'models/']
+});
 
 var app = express();
 app.set('views', __dirname + '/views');
