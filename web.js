@@ -1,5 +1,7 @@
 // Define routes for simple SSJS web app. 
 // Writes Coinbase orders to database.
+require('newrelic');
+
 var async   = require('async')
   , express = require('express')
   , fs      = require('fs')
@@ -16,6 +18,7 @@ var app = express();
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.set('port', process.env.PORT || 8080);
+app.use(express.static(__dirname + '/img'));
 
 // Render homepage (note trailing slash): example.com/
 app.get('/', function(request, response) {
