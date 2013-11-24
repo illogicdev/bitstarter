@@ -1,5 +1,7 @@
 // Define routes for simple SSJS web app. 
 // Writes Coinbase orders to database.
+require('newrelic');
+
 var async   = require('async')
   , express = require('express')
   , fs      = require('fs')

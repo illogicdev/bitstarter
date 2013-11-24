@@ -8,7 +8,7 @@ exports.config = {
   /**
    * Array of application names.
    */
-  app_name : ['bitstarter'],
+  app_name : ['illogicdev-bitstarter-mooc','illogicdev-bitstarter-s-mooc'],
   /**
    * Your New Relic license key.
    */
